@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>App</title>
+	<meta name="description" content="Kurzbeschreibung">
+</head>
+<style>
+  @font-face {
+    font-family: "Retro Gaming";
+      src: url("https://db.onlinewebfonts.com/t/4c19fc875e7ba1e6831129de3ab5ac0b.eot");
+      src: url("https://db.onlinewebfonts.com/t/4c19fc875e7ba1e6831129de3ab5ac0b.eot?#iefix")format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/4c19fc875e7ba1e6831129de3ab5ac0b.woff2")format("woff2"),
+      url("https://db.onlinewebfonts.com/t/4c19fc875e7ba1e6831129de3ab5ac0b.woff")format("woff"),
+      url("https://db.onlinewebfonts.com/t/4c19fc875e7ba1e6831129de3ab5ac0b.ttf")format("truetype"),
+      url("https://db.onlinewebfonts.com/t/4c19fc875e7ba1e6831129de3ab5ac0b.svg#Retro Gaming")format("svg");
+}
+
+  body {
+    font-family: Retro Gaming;
+  }
+
+  #streak {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  #hearts {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+
+  #statusbar {
+    font-size: 200%;
+  }
+
+  #play-game {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  font-size: 320%;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }
+}
+
+</style>
+<body>
+<container id="statusbar">
+<a id="streak">🔥 <strong>1</strong></a><a id="hearts">❤️❤️❤️❤️</a>
+</container>
+<container id="play-game">
+<a class ="floating" onclick="play()">🎌<br>START</a>
+</container>
+</body>
+</html>
